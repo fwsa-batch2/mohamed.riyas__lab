@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check positive,negative or zero</title>
+<style>
+    *{
+        background-color: aqua;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <input type="text" id="numberInput" placeholder="ENTER A NUMBER" required>
+        <button type="submit" onclick="checkInput()">CHECK</button>
+    </div>
+    <script>
+        function checkInput() {
+            event.preventDefault();
+            let input1 = parseFloat(document.getElementById("numberInput").value);
+            console.log(typeof input1)
+            if (input1 < 0) {
+                console.log("The value you entered is negative");
+            }
+            else if (input1 == 0) {
+                console.log("The value you entered is zero");
+            }
+            else {
+                console.log("the value you entered is positive")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -38,3 +38,22 @@ create table students(student_id int(5) PRIMARY KEY AUTO_INCREMENT, Name varchar
 create table voters (vote_id int(5), voter_name varchar(20), age int(2), CHECK (age > 18));
 ```
 ###### Query OK, 0 rows affected, 2 warnings (0.07 sec)
+### FOREIGN KEY The foreign key is used to link one or more than one table together.
+
+```
+create table orders(order_id int(5) PRIMARY KEY, name varchar(255), product_id int(5), FOREIGN KEY(product_id) references products(product_id));
+```
+
+###### Query OK, 0 rows affected, 2 warnings (0.04 sec)
+
+```
+desc orders;
+```
+
+| Field      | Type         | Null | Key | Default | Extra |
+|:-----------|:-------------|:-----|:----|:--------|:------|
+| order_id   | int          | NO   | PRI | NULL    |       |
+| name       | varchar(255) | YES  |     | NULL    |       |
+| product_id | int          | YES  | MUL | NULL    |       |
+
+###### 3 rows in set (0.01 sec)

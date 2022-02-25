@@ -58,3 +58,19 @@ desc orders;
 | product_id | int          | YES  | MUL | NULL    |       |
 
 ###### 3 rows in set (0.01 sec)
+
+```
+insert into orders values(1,"Aswath",1);
+```
+
+###### Query OK, 1 row affected (0.01 sec)
+
+```
+select * from orders;
+```
+
+| order_id | name   | product_id |
+|:---------|:-------|:-----------|
+|        1 | Aswath |          1 |
+
+###### 1 row in set (0.00 sec)

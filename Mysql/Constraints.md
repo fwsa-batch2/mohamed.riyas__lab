@@ -1,4 +1,4 @@
-## CONSTRAINTS
+# CONSTRAINTS
 ### PRIMARY KEY
 #### The PRIMARY KEY constraint uniquely identifies each record in a table.
 ```

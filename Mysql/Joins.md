@@ -28,6 +28,7 @@ SELECT users.id,users.name,products.product_name from users LEFT JOIN products o
 |  4 | rishi  | NULL                |
 
 ###### 4 rows in set (0.00 sec)
+****
 
 ### RIGHT JOIN
 #### The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1).
@@ -42,6 +43,7 @@ SELECT users.id,users.name,products.product_name from users RIGHT JOIN products 
 |    3 | riyas  | spiderweb bar Chair |
 
 ###### 3 rows in set (0.00 sec)
+****
 
 ### CROSS JOIN 
 #### The CROSS JOIN keyword returns all records from both tables (table1 and table2)

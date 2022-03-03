@@ -160,13 +160,14 @@ select * from student_class;
 ###### 2 rows in set (0.00 sec)
 
 ```
-select * from student_class;
+insert into student_class (id,class,status,stud_id) values(5,10,"ACTIVE",5);
 ```
 
 | id | class | status | stud_id |
 |:---|-------|:-------|:--------|
 |  1 |    12 | ACTIVE |       1 |
 |  2 |    12 | ACTIVE |       2 |
+|  5 |    10 | ACTIVE |       5 |
 
 ###### 2 rows in set (0.01 sec)
 ****
@@ -216,23 +217,14 @@ select * from student;
 ###### 4 rows in set (0.01 sec)
 
 ```
-update student SET dob = '2003-7-16' WHERE stud_id = 3;
+ select name from student where dob is NULL;
 ```
-
-###### Query OK, 1 row affected (0.01 sec)
-
-```
-select * from student;
-```
-
-| stud_id | name      | email               | mobile_no  | password       | gender | dob        | created_date        |
-|:--------|:----------|:--------------------|:-----------|:---------------|:-------|:-----------|:--------------------|
-|       1 | Ramya     | ramya@gmail.com     |  880929053 | ramya@2022     | F      | 2004-11-15 | 2022-03-02 14:55:06 |
-|       2 | Aswath    | aswath@gmail.com    | 8468392751 | aswath@2022    | M      | 2003-09-07 | 2022-03-02 15:17:33 |
-|       3 | jerusheya | jerusheya@gmail.com | 8645219865 | jerusheya@2022 | F      | 2003-07-16 | 2022-03-03 11:52:49 |
-|       8 | Rahul     | rahul@gmail.com     | 9645327698 | rahul@2022     | M      | 2003-02-21 | 2022-03-02 15:19:33 |
-
-###### 4 rows in set (0.01 sec)
++-----------+
+| name      |
++-----------+
+| jerusheya |
++-----------+
+###### 1 row in set (0.00 sec)
 ****
 
 ### Feature 10: Find Total no of students actively studying in this school.
@@ -251,15 +243,12 @@ select * from student_class;
 ###### 4 rows in set (0.00 sec)
 
 ```
-select * from student_class where status = "ACTIVE";
+select count(*) from student_class where status = "ACTIVE";
 ```
 
-| id | class | status | stud_id |
-|:---|:------|:-------|:--------|
-|  1 |    12 | ACTIVE |       1 |
-|  3 |    12 | ACTIVE |       3 |
-
-###### 2 rows in set (0.00 sec)
+| count(*) |
+|:---------|
+|        2 |
 ****
 
 ### Feature 11: Find Total no of students actively studying in each class.
@@ -360,19 +349,19 @@ select student.stud_id,student.name,student.email,student.mobile_no,student.pass
 ## Email: aswath@gmail.com
 
 ```
-select student.stud_id,student.name,student.email from student inner join student_class on student.stud_id = student_class.id where email = 'aswath@gmail.com';
+select student.stud_id,student.name,student.email,student_class.class from student inner join student_class on student.stud_id = student_class.id where email = 'aswath@gmail.com';
 ```
 
-| stud_id | name   | email            |
-|:--------|:-------|:-----------------|
-|       2 | Aswath | aswath@gmail.com |
-
+| stud_id | name   | email            | class |
+|:--------|:-------|:-----------------|:------|
+|       2 | Aswath | aswath@gmail.com |    12 |
 ### 1 row in set (0.00 sec)
 ****
+
 ### Feature 16: Find Students who has not enrolled in a class.
 
 ```
-select student.stud_id,student.name,student_class.class,student_class.status from student right join student_class on student.stud_id = student_class.id;
+select student.stud_id,student.name,student_class.class,student_class.status from student left join student_class on student.stud_id = student_class.id;
 ```
 
 | stud_id | name      | class | status   |
@@ -381,8 +370,19 @@ select student.stud_id,student.name,student_class.class,student_class.status fro
 |       2 | Aswath    |    12 | INACTIVE |
 |       3 | jerusheya |    12 | ACTIVE   |
 |       4 | SWETHA    |    10 | INACTIVE |
+|       5 | Haiden    |    10 | ACTIVE   |
+|       8 | Rahul     |  NULL | NULL     |
 
-###### 4 rows in set (0.00 sec)
+###### 6 rows in set (0.00 sec)
+
+```
+select student.stud_id,student.name,student_class.class,student_class.status from student left join student_class on student.stud_id = student_class.id where class is NULL;
+```
+
+| stud_id | name  | class | status |
+|:--------|:------|:------|:-------|
+|       8 | Rahul |  NULL | NULL   |
+###### 1 row in set (0.00 sec)
 ****
 
 ### Feature 17: Display all students name with class - include both enrolled and not enrolled #

@@ -219,11 +219,11 @@ select * from student;
 ```
  select name from student where dob is NULL;
 ```
-+-----------+
+
 | name      |
-+-----------+
+|:----------|
 | jerusheya |
-+-----------+
+
 ###### 1 row in set (0.00 sec)
 ****
 

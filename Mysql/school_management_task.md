@@ -82,13 +82,16 @@ select * from student;
 ### Feature 3: Login with email and password
 
 ```
-select email,password from student where name = 'Rahul';
+select * from student where email = 'rahul@gmail.com' and password = "rahul@2022";
 ```
-| email           | password   |
-|:----------------|:-----------|
-| rahul@gmail.com | rahul@2022 |
 
-###### 1 row in set (0.00 sec)
+
+| stud_id | name  | email           | mobile_no  | password   | gender | dob        | created_date        |
+|:--------|:------|:----------------|:-----------|:-----------|:-------|:-----------|:--------------------|
+|       8 | Rahul | rahul@gmail.com | 9645327698 | rahul@2022 | M      | 2003-02-21 | 2022-03-02 15:19:33 |
+
+###### row in set (0.01 sec)
+
 ****
 
 ### Feature 4: Update Password

@@ -32,6 +32,6 @@ show index from products;
 |:---------|:-----------|:---------|:-------------|:-------------|:----------|:------------|:---------|:-------|:-----|:-----------|:-------|:--------------|:--------|:-----------|
 | products |          0 | PRIMARY  |            1 | product_id   | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 | products |          1 | non_Cix  |            1 | product_name | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
-| products |          1 | non_Cix  |            1 | product_name | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| products |          0 | un_ix    |            1 | price        | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 
 ###### 2 rows in set (0.02 sec)

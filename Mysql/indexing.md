@@ -35,3 +35,21 @@ show index from products;
 | products |          0 | un_ix    |            1 | price        | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 
 ###### 2 rows in set (0.02 sec)
+
+### COMPOSITE INDEX
+
+```
+create index non_Cix on products(product_name,price);
+```
+###### Query OK, 0 rows affected (0.03 sec)
+###### Records: 0  Duplicates: 0  Warnings: 0
+****
+
+### DROP INDEX
+
+```
+drop index non_Cix on products;
+```
+###### Query OK, 0 rows affected (0.02 sec)
+###### Records: 0  Duplicates: 0  Warnings:
+****

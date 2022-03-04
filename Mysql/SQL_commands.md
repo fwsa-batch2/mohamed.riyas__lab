@@ -1,3 +1,3 @@
 ## SQL COMMANDS
 
-![Total commands](https://static.javatpoint.com/dbms/images/dbms-sql-command.png)
+![Total commands](./../../../mobelfurnitureapp-ui/assets/images/bookshelf.jpg)

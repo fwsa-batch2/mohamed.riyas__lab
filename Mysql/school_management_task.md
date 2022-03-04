@@ -386,7 +386,7 @@ select student.stud_id,student.name,student_class.class,student_class.status fro
 ****
 
 ### Feature 17: Display all students name with class - include both enrolled and not enrolled #
-## Using Joins ( Left outer join)
+#### Using Joins ( Left outer join)
 ```
 select student.stud_id,student.name,student_class.class,student_class.status from student left join student_class on student.stud_id = student_class.id;
 ```

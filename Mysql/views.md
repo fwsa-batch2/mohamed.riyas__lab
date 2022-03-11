@@ -11,7 +11,7 @@ show tables;
 ```
 
 | Tables_in_rough |
-+-----------------+
+|:----------------|
 | employee        |
 | highest_salary  |
 

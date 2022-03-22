@@ -1,5 +1,3 @@
-## SUB QUERIES
-
 ```
 select * from products;
 ```

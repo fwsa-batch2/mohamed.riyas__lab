@@ -114,6 +114,22 @@ desc payment;
 | payment_status  | varchar(20) | YES  |     | NULL    |       |
 
 ###### 5 rows in set (0.01 sec)
+
+```
+show tables;
+```
+
+
+| Tables_in_mobel_furnitures |
+|:---------------------------|
+| category                   |
+| orders                     |
+| payment                    |
+| products                   |
+| users                      |
+
+###### 5 rows in set (0.00 sec)
+
 ****
 
 ## Inserting values into the tables

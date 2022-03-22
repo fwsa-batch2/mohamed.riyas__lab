@@ -6,8 +6,6 @@
 CREATE DATABASE mobel_furnitures;
 ```
 
-###### Query OK, 1 row affected (0.01 sec)
-
 ## Creating Tables
 
 #### Users table

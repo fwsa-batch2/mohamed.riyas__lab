@@ -227,7 +227,7 @@ select * from products;
 ```
 
 | product_id | product_name                         | product_type | category_id | Price | warranty | Footrest | Armrest | Wheels |
-+------------+--------------------------------------+--------------+-------------+-------+----------+----------+---------+--------+
+|:-----------|:-------------------------------------|:-------------|:------------|:------|:---------|:---------|:--------|:-------|
 |          1 | Rapid Orange Natural Fiber Bar Chair | Chair        |           1 |  2000 | 3 Years  | Yes      | No      | No     |
 |          2 | Swivel Bar Chair                     | Chair        |           1 |  2200 | 3 Years  | Yes      | No      | No     |
 |          3 | Leatherette Office Executive Chair   | Chair        |           2 |  5200 | 5 Years  | No       | Yes     | Yes    |

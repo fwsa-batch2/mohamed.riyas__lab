@@ -275,4 +275,10 @@ select * from payment;
 |      79852 |        2 | Debit card   | Delivered       | Received       |
 
 ###### 2 rows in set (0.00 sec)
+<<<<<<< HEAD
 ****
+=======
+
+![image](https://user-images.githubusercontent.com/93571049/159635530-c16c6dff-a581-4682-a858-1d7a3b60265b.png)
+
+>>>>>>> b03587f5678c432af8c848bd129ee029e717351d

@@ -275,3 +275,6 @@ select * from payment;
 |      79852 |        2 | Debit card   | Delivered       | Received       |
 
 ###### 2 rows in set (0.00 sec)
+
+![Screenshot 2022-03-11 153530](https://user-images.githubusercontent.com/93571049/159635337-4952645f-ccc4-4a42-86e8-b237c3fe7a89.png)
+

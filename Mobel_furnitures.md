@@ -275,3 +275,4 @@ select * from payment;
 |      79852 |        2 | Debit card   | Delivered       | Received       |
 
 ###### 2 rows in set (0.00 sec)
+****

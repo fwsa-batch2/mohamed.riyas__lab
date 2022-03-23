@@ -276,5 +276,5 @@ select * from payment;
 
 ###### 2 rows in set (0.00 sec)
 
-![Screenshot 2022-03-11 153530](https://user-images.githubusercontent.com/93571049/159635337-4952645f-ccc4-4a42-86e8-b237c3fe7a89.png)
+![image](https://user-images.githubusercontent.com/93571049/159635530-c16c6dff-a581-4682-a858-1d7a3b60265b.png)
 

@@ -2,6 +2,8 @@
 
 ![Mobel ER Diagram](https://user-images.githubusercontent.com/93571049/159455328-744ef2f4-0ede-4633-9197-5f3078811d8e.png)
 
+![image](https://user-images.githubusercontent.com/93571049/159635530-c16c6dff-a581-4682-a858-1d7a3b60265b.png)
+
 ### Creating database
 
 ```
@@ -277,5 +279,3 @@ select * from payment;
 ###### 2 rows in set (0.00 sec)
 
 ****
-
-![image](https://user-images.githubusercontent.com/93571049/159635530-c16c6dff-a581-4682-a858-1d7a3b60265b.png)

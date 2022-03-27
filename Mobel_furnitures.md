@@ -33,6 +33,43 @@ DESC users;
 
 ###### 5 rows in set (0.01 sec)
 
+#### Roles Table
+
+```
+create table roles(role_id int(5) primary key auto_increment,role_name varchar(20) not null);
+```
+###### Query OK, 0 rows affected, 1 warning (0.09 sec)
+
+```
+DESC roles;
+```
+
+| Field     | Type        | Null | Key | Default | Extra          |
+|:----------|:------------|:-----|:----|:--------|:---------------|
+| role_id   | int         | NO   | PRI | NULL    | auto_increment |
+| role_name | varchar(20) | YES  |     | User    |                |
+
+###### 2 rows in set (0.03 sec)
+
+#### User_roles Table
+
+```
+create table user_roles(id int(5) primary key auto_increment, user_id int(5), role_id int(5), FOREIGN KEY(user_id) REFERENCES users(user_id), FOREIGN KEY(role_id) REFERENCES roles(role_id));
+```
+###### Query OK, 0 rows affected, 3 warnings (0.03 sec)
+
+```
+DESC user_roles;
+```
+
+| Field   | Type | Null | Key | Default | Extra          |
+|:--------|:-----|:-----|:----|:--------|:---------------|
+| id      | int  | NO   | PRI | NULL    | auto_increment |
+| user_id | int  | YES  | MUL | NULL    |                |
+| role_id | int  | YES  | MUL | NULL    |                |
+
+###### 3 rows in set (0.01 sec)
+
 #### Products Table
 
 ```
@@ -121,16 +158,17 @@ desc payment;
 show tables;
 ```
 
-
 | Tables_in_mobel_furnitures |
 |:---------------------------|
 | category                   |
 | orders                     |
 | payment                    |
 | products                   |
+| roles                      |
+| user_roles                 |
 | users                      |
 
-###### 5 rows in set (0.00 sec)
+###### 7 rows in set (0.01 sec)
 
 ****
 
@@ -171,6 +209,39 @@ select * from users;
 |       5 | Krunal Pandya | kpandya@gmail.com              |   9702583343 | Krunal@200 |
 
 ###### 5 rows in set (0.01 sec)
+
+#### Inserting values into roles
+
+```
+insert into roles(role_name) values ('User'),('admin');
+```
+
+```
+select * from roles;
+```
+
+| role_id | role_name |
+|:--------|:----------|
+|       1 | User      |
+|       2 | admin     |
+
+```
+insert into user_roles(user_id,role_id) values (1,1),(2,1),(3,1),(4,1),(5,1);
+```
+```
+select * from user_roles;
+```
+
+
+| id | user_id | role_id |
+|:---|:--------|:--------|
+|  1 |       1 |       1 |
+|  2 |       2 |       1 |
+|  3 |       3 |       1 |
+|  4 |       4 |       1 |
+|  5 |       5 |       1 |
+
+###### 5 rows in set (0.00 sec)
 
 #### Inserting values into category
 
@@ -277,5 +348,4 @@ select * from payment;
 |      79852 |        2 | Debit card   | Delivered       | Received       |
 
 ###### 2 rows in set (0.00 sec)
-
 ****

@@ -1,8 +1,9 @@
 ## Mobel Furnitures 
 
-![Mobel ER Diagram](https://user-images.githubusercontent.com/93571049/159455328-744ef2f4-0ede-4633-9197-5f3078811d8e.png)
+![er](https://user-images.githubusercontent.com/93571049/160277967-12c9da37-6994-44fa-9c7b-997347820606.png)
 
-![image](https://user-images.githubusercontent.com/93571049/159635530-c16c6dff-a581-4682-a858-1d7a3b60265b.png)
+![eer](https://user-images.githubusercontent.com/93571049/160277983-25ce0bf2-d840-48b3-b731-11a73fea93a5.png)
+
 
 ### Creating database
 

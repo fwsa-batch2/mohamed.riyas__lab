@@ -2,6 +2,8 @@
 
 ![er](https://user-images.githubusercontent.com/93571049/160277967-12c9da37-6994-44fa-9c7b-997347820606.png)
 
+![Mobel er diagram](https://user-images.githubusercontent.com/93571049/160343741-d968a4b2-3fd0-47de-8052-7b83c7352ff1.png)
+
 ### Creating database
 
 ```

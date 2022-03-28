@@ -2,9 +2,6 @@
 
 ![er](https://user-images.githubusercontent.com/93571049/160277967-12c9da37-6994-44fa-9c7b-997347820606.png)
 
-![eer](https://user-images.githubusercontent.com/93571049/160277983-25ce0bf2-d840-48b3-b731-11a73fea93a5.png)
-
-
 ### Creating database
 
 ```

@@ -19,7 +19,7 @@ domain = get_command_line_argument
 file = File.open("zone.txt")
 dns_raw = File.readlines(file)
 def parse_dns(params)
-    for i in 0...params.length do
+    for i in 0...params.length do   
         if params[i].include? "#"
             array = params.drop(i+1)
         end
@@ -52,7 +52,6 @@ end
 # Remember to implement them above this line since in Ruby
 # you can invoke a function only after it is defined.
 dns_records = parse_dns(dns_raw)
-p dns_records
 lookup_chain = [domain]
 lookup_chain = resolve(dns_records, lookup_chain, domain)
 puts lookup_chain.join(" => ")
